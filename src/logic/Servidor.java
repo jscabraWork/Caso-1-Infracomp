@@ -13,10 +13,7 @@ public class Servidor extends Thread
 	}
 	
 	
-	public synchronized void sacarCliente(){
-		
-		buffer.clienteSalio();
-	}
+
 	
 	public synchronized void leerMensaje(){
 		
