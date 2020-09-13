@@ -23,6 +23,7 @@ public class Cliente extends Thread
 		while ( buffer.cuantosClientesHay() == buffer.darTamano()){
 			this.wait();
 		}
+		cantidad++;
 		buffer.clienteEntro(x);
 	}
 	
