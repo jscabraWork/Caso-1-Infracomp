@@ -17,9 +17,7 @@ public class Servidor extends Thread
 	
 	public synchronized void leerMensaje(){
 		
-		buffer.getMensajes();
-		
-		buffer.notifyAll();
+		buffer.leerMensaje();
 	}
 
 }

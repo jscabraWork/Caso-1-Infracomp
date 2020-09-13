@@ -39,4 +39,9 @@ public class Buffer
 	{
 		return contadorClientes;
 	}
+	
+	public  void leerMensaje(){
+		
+	}
+	
 }
