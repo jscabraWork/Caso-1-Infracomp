@@ -20,15 +20,12 @@ public class Cliente extends Thread
 		
 		
 		Mensaje x = new Mensaje(mensaje);
-		if (buffer.cuantosClientesHay() <= buffer.darTamano()) 
-		{
-			buffer.clienteEntro(x);
-		}
-		else 
-		{
+		while ( buffer.cuantosClientesHay() == buffer.darTamano()){
 			this.wait();
 		}
+		buffer.clienteEntro(x);
 	}
+	
 	
 	public void run(){
 		
