@@ -26,11 +26,19 @@ public class Cliente extends Thread
 		buffer.clienteEntro(x);
 	}
 	
+	public void salir(){
+		buffer.clienteSalio();
+		notify();
+	}
 	
 	public void run(){
 		
 		try {
+			
+			for(int i =0 ; i < 5; i ++){
 			generarMensaje("La cantidad de mensajes del cliente "+id+" es de: "+ cantidad);
+			}
+			salir();
 		} catch (InterruptedException e) {
 		
 			e.printStackTrace();
