@@ -23,4 +23,5 @@ public class Cliente extends Thread
 			this.wait();
 		}
 	}
+	
 }

@@ -20,6 +20,10 @@ public class Buffer
 		return tamano;
 	}
 	
+	public Mensaje[] getMensajes(){
+		return mensajes;
+	}
+	
 	public void clienteEntro(Mensaje mensaje)
 	{
 		contadorClientes++;
