@@ -19,7 +19,7 @@ public class Cliente extends Thread
 	{
 		
 		
-		Mensaje x = new Mensaje(mensaje);
+		Mensaje x = new Mensaje(mensaje, this);
 		while ( buffer.cuantosClientesHay() == buffer.darTamano()){
 			this.wait();
 		}
@@ -30,6 +30,11 @@ public class Cliente extends Thread
 	public void salir(){
 		buffer.clienteSalio();
 		notify();
+	}
+	
+	
+	public void disminuirCantidad(){
+		cantidad --;
 	}
 	
 	public void run(){
