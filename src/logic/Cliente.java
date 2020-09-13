@@ -14,7 +14,7 @@ public class Cliente extends Thread
 	public void generarMensaje(String mensaje) throws InterruptedException
 	{
 		Mensaje x = new Mensaje(mensaje);
-		if (buffer.cuantosClientesHay() != buffer.darTamano()) 
+		if (buffer.cuantosClientesHay() <= buffer.darTamano()) 
 		{
 			buffer.clienteEntro(x);
 		}
