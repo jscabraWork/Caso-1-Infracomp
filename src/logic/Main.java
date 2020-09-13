@@ -10,6 +10,7 @@ public class Main
 	
 	public static void main(String[] args)
 	{
+		buffer = new Buffer(10);
 		Cliente[] clientes = new Cliente[NUMERO_THREADS];
 		Servidor[]servidores = new Servidor [NUMERO_THREADS];
 		for(int i =0; i< NUMERO_THREADS; i++)
