@@ -18,6 +18,7 @@ public class Main
 			clientes[i] = new Cliente(0, buffer);
 			servidores[i] = new Servidor(buffer);
 			clientes[i].start();
+			servidores[i].start();
 		}
 		
 		

@@ -19,9 +19,15 @@ public class Servidor extends Thread
 		
 		while(buffer.getMensajes().length >0){
 		buffer.leerMensaje();
+		Thread.yield();
+		
 		}
 	}
 	
+	public void run()
+	{
+		leerMensaje();
+	}
 	
 
 }
