@@ -17,7 +17,11 @@ public class Servidor extends Thread
 	
 	public synchronized void leerMensaje(){
 		
+		while(buffer.getMensajes().length >0){
 		buffer.leerMensaje();
+		}
 	}
+	
+	
 
 }

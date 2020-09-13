@@ -42,7 +42,8 @@ public class Buffer
 	
 	public  void leerMensaje(){
 		
-		mensajes[0] = null; // aca tenemos que pensar que mensaje es el que vamos a sacar
+		mensajes[0] = null; // aca tenemos que pensar que mensaje es el que vamos a sacar y reducir el numero de mensajes en el tamaño
+		notifyAll();
 		
 	}
 	
